@@ -1,0 +1,106 @@
+<!-- sticky footer ? -->
+<!DOCTYPE html>
+<html lang="pt-br" class="relative min-h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white font-poppins mb-[229px]">
+    <img 
+        src="./images/top-image.svg" 
+        alt="gray line for design purposes"
+        class="w-screen">
+    
+    <main class="h-screen flex justify-center items-center"> 
+        <article class="flex flex-col items-center justify-center gap-8 basis-1/2">
+            
+            <section>
+                <table>
+                    <caption class="text-blue text-3xl font-bold tracking-wider uppercase mb-6">Ready to launch in...</caption>
+    
+                    <thead class="text-[#c8c8c8] text-sm">
+                        <tr>
+                            <th class="font-light">Dias</th>
+                            <th></th>
+                            <th class="font-light">Horas</th>
+                            <th></th>
+                            <th class="font-light">Minutos</th>
+                            <th></th>
+                            <th class="font-light">Segundos</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody class="text-[#4D4C59] font-normal text-[72px]">
+                        <tr id="table-row"></tr>
+                    </tbody>
+                </table>
+            </section>
+    
+            <section class="flex flex-col items-center gap-7">
+                <span class="text-[#9C9AB6]">Inscreva-se para saber mais sobre o lançamento</span>
+                <button id="btn-subscribe" class="bg-blue text-white py-4 px-16 rounded-xl hover:bg-[#817aff]">Inscreva-se</button>
+            </section>
+        </article>
+    
+        
+        
+        <img 
+            src="./images/rocket.svg" 
+            alt="rocket image"
+            class="w-[607px] h-[435px]"
+        >
+    
+    </main>
+
+    <img
+        src="./images/bottom-image.svg" 
+        alt="gray line for design purposes"
+        class="absolute right-0 left-0 bottom-0 w-screen">
+
+    <!-- modal -->
+    <div id="modal" class="hidden bg-black/50 w-screen h-screen fixed top-0 flex items-center justify-center">
+        <div class="bg-white rounded-full fixed top-10 left-10">
+            <img 
+                src="./images/arrow-back.svg" 
+                alt="arrow to go back"
+                id="arrow-back"
+                class="w-8 m-2 hover:scale-125 transition duration-300 ease-in-out"    
+            >
+        </div>
+        
+        <div class="bg-white w-1/2 h-1/2 p-10 z-20 rounded">
+            <form action="post" class="h-full flex flex-col items-center justify-between">
+                <h2 class="font-bold text-xl tracking-widest text-blue">Novo Cadastro</h2>
+
+                <label class="flex flex-col w-full">Nome
+                    <input 
+                        type="text" 
+                        name="name" 
+                        id="name"
+                        placeholder="Digite seu nome..."
+                        class="h-8 mt-2 pl-2 border-blue border-2 rounded-lg focus:border-2 focus:border-blue focus:outline-none">
+                </label>
+
+                <label class="flex flex-col w-full">E-mail
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="email"
+                        placeholder="Digite seu e-mail..."
+                        class="h-8 mt-2 pl-2 border-blue border-2 rounded-lg focus:border-2 focus:border-blue focus:outline-none">
+                </label>
+
+                <button id="btn-save" class="bg-blue text-white px-8 py-2 rounded-lg hover:bg-[#817aff]" disabled>Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
